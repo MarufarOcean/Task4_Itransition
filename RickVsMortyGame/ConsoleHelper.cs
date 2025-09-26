@@ -53,17 +53,24 @@ namespace RickVsMortyGame
             Console.WriteLine("│ Game results │ Rick switched │ Rick stayed │");
             Console.WriteLine("├──────────────┼───────────────┼─────────────┤");
 
+            // Rounds row
             Console.WriteLine($"│ Rounds       │ {stats.SwitchedRounds,13} │ {stats.StayedRounds,11} │");
-            Console.WriteLine($"│ Wins         │ {stats.SwitchedWins,13} │ {stats.StayedWins,11} │");
+            Console.WriteLine("├──────────────┼───────────────┼─────────────┤");
 
+            // Wins row  
+            Console.WriteLine($"│ Wins         │ {stats.SwitchedWins,13} │ {stats.StayedWins,11} │");
+            Console.WriteLine("├──────────────┼───────────────┼─────────────┤");
+
+            // P (estimate) row
             var switchedEstimate = stats.GetEstimatedWinProbability(true).ToString("F3");
             var stayedEstimate = stats.GetEstimatedWinProbability(false).ToString("F3");
             Console.WriteLine($"│ P (estimate) │ {switchedEstimate,13} │ {stayedEstimate,11} │");
+            Console.WriteLine("├──────────────┼───────────────┼─────────────┤");
 
+            // P (exact) row
             var switchedExact = morty.GetWinProbabilityIfSwitch(numberOfBoxes).ToString("F3");
             var stayedExact = morty.GetWinProbabilityIfStay(numberOfBoxes).ToString("F3");
             Console.WriteLine($"│ P (exact)    │ {switchedExact,13} │ {stayedExact,11} │");
-
             Console.WriteLine("└──────────────┴───────────────┴─────────────┘");
         }
     }

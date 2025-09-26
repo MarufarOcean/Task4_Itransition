@@ -66,7 +66,7 @@ namespace RickVsMortyGame
                     _numberOfBoxes - boxesToRemove.Length, secretKey2);
 
                 var remainingBoxes = GetRemainingBoxes(rickFirstChoice, boxesToRemove);
-                Console.WriteLine($"Morty: I'm keeping the box you chose ({rickFirstChoice}), and the box {remainingBoxes[1]}.");
+                Console.WriteLine($"Morty: I'm keeping the box you chose, I mean {rickFirstChoice}, and the box {remainingBoxes[1]}.");
 
                 Console.WriteLine($"Morty: {_morty.GetFinalChoiceLine()}");
                 Console.Write("Rick: ");
