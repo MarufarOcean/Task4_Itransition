@@ -37,7 +37,7 @@ namespace RickVsMortyGame
             var secretKey1 = _randomGenerator.GenerateSecretKey();
             var firstRandom = _randomGenerator.GenerateFairRandom(portalGunBox, rickFirstValue, _numberOfBoxes, secretKey1);
 
-            Console.WriteLine($"Morty: {_morty.GetHidingLine()} [0,{_numberOfBoxes})");
+            Console.WriteLine($"Morty: {string.Format(_morty.GetHidingLine(), _numberOfBoxes)}");
             Console.Write("Rick: ");
 
             var rickFirstChoice = ConsoleHelper.ReadIntegerInput("", 0, _numberOfBoxes);

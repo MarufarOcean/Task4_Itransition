@@ -65,7 +65,7 @@ namespace LazyMorty
         public string GetIntroLine(int numberOfBoxes) =>
             $"Uh, Rick, I guess I'll hide your portal gun in one of these {numberOfBoxes} boxes...";
 
-        public string GetHidingLine() => "Yeah, yeah, it's hidden. Just pick one already.";
+        public string GetHidingLine() => "Yeah, yeah, it's hidden. Just pick one already [0,{0}).";
         public string GetRemovingBoxesLine() => "I'm gonna remove some boxes now, I guess...";
         public string GetFinalChoiceLine() => "So, like, wanna switch or stick with your box? (0=switch, 1=stay)";
         public string GetWinLine() => "Oh, you found it. Great.";

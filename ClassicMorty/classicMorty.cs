@@ -62,12 +62,12 @@ namespace ClassicMorty
         public string GetIntroLine(int numberOfBoxes) =>
             $"Oh geez, Rick, I'm gonna hide your portal gun in one of the {numberOfBoxes} boxes, okay?";
 
-        public string GetHidingLine() => "Okay, okay, I hid the gun. What's your guess?";
+        public string GetHidingLine() => "Okay, okay, I hid the gun. What's your guess [0,{0})?";
         public string GetRemovingBoxesLine() =>
             "Let's, uh, generate another value now, I mean, to select a box to keep in the game.";
         public string GetFinalChoiceLine() =>
             "You can switch your box (enter 0), or, you know, stick with it (enter 1).";
-        public string GetWinLine() => "Aww man, you found your portal gun!";
+        public string GetWinLine() => "Aww man, you won, Rick. You found your portal gun!";
         public string GetLoseLine() => "Aww man, you lost, Rick. Now we gotta go on one of *my* adventures!";
         public string GetPlayAgainLine() => "D-do you wanna play another round (y/n)?";
 
