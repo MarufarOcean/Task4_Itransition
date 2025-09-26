@@ -66,11 +66,13 @@ namespace LazyMorty
             $"Uh, Rick, I guess I'll hide your portal gun in one of these {numberOfBoxes} boxes...";
 
         public string GetHidingLine() => "Yeah, yeah, it's hidden. Just pick one already [0,{0}).";
-        public string GetRemovingBoxesLine() => "I'm gonna remove some boxes now, I guess...";
-        public string GetFinalChoiceLine() => "So, like, wanna switch or stick with your box? (0=switch, 1=stay)";
-        public string GetWinLine() => "Oh, you found it. Great.";
-        public string GetLoseLine() => "Guess you're stuck with my boring adventures now.";
-        public string GetPlayAgainLine() => "You wanna go again or what? (y/n)";
+        public string GetRemovingBoxesLine() =>
+            "Let's, uh, generate another value now, I mean, to select a box to keep in the game.";
+        public string GetFinalChoiceLine() =>
+            "You can switch your box (enter 0), or, you know, stick with it (enter 1).";
+        public string GetWinLine() => "Aww man, you won, Rick! You found your portal gun!";
+        public string GetLoseLine() => "Aww man, you lost, Rick. Now we gotta go on one of *my* adventures!";
+        public string GetPlayAgainLine() => "D-do you wanna play another round (y/n)?";
 
         private int GenerateRandomValue(int maxValue)
         {

@@ -67,7 +67,7 @@ namespace ClassicMorty
             "Let's, uh, generate another value now, I mean, to select a box to keep in the game.";
         public string GetFinalChoiceLine() =>
             "You can switch your box (enter 0), or, you know, stick with it (enter 1).";
-        public string GetWinLine() => "Aww man, you won, Rick. You found your portal gun!";
+        public string GetWinLine() => "Aww man, you won, Rick! You found your portal gun!";
         public string GetLoseLine() => "Aww man, you lost, Rick. Now we gotta go on one of *my* adventures!";
         public string GetPlayAgainLine() => "D-do you wanna play another round (y/n)?";
 
