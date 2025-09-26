@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RickVsMortyGame": {
+      "commandName": "Project",
+      "commandLineArgs": "3 F:\\C#\\Task4\\ClassicMorty\\bin\\Debug\\net9.0\\ClassicMorty.dll classicMorty"
+    }
+  }
+}
