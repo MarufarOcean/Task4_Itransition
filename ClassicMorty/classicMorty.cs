@@ -21,7 +21,7 @@ namespace ClassicMorty
 
         public int HidePortalGun(int numberOfBoxes, FairRandomGenerator randomGenerator, out string hmac)
         {
-            var mortyValue = GenerateRandomValue(numberOfBoxes);
+            var mortyValue = RandomNumberGenerator.GetInt32(numberOfBoxes);
             hmac = randomGenerator.GenerateHmac(mortyValue, numberOfBoxes);
             return mortyValue;
         }
@@ -39,7 +39,7 @@ namespace ClassicMorty
                 var availableBoxes = Enumerable.Range(0, numberOfBoxes)
                     .Where(b => b != rickFirstChoice)
                     .ToList();
-                boxToKeep = availableBoxes[GenerateRandomValue(availableBoxes.Count)];
+                boxToKeep = availableBoxes[RandomNumberGenerator.GetInt32(availableBoxes.Count)];
             }
             else
             {
@@ -71,12 +71,5 @@ namespace ClassicMorty
         public string GetLoseLine() => "Aww man, you lost, Rick. Now we gotta go on one of *my* adventures!";
         public string GetPlayAgainLine() => "D-do you wanna play another round (y/n)?";
 
-        private int GenerateRandomValue(int maxValue)
-        {
-            var bytes = new byte[4];
-            _rng.GetBytes(bytes);
-            var value = BitConverter.ToUInt32(bytes, 0);
-            return (int)(value % maxValue);
-        }
     }
 }

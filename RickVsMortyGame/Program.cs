@@ -17,10 +17,6 @@ namespace RickAndMortyGame
                 var commandLineArgs = new CommandLineArgs(args);
                 var morty = MortyLoader.LoadMorty(commandLineArgs.MortyAssemblyPath, commandLineArgs.MortyClassName);
 
-                //Console.WriteLine($"Loaded Morty: {morty.Name}");
-                //Console.WriteLine($"Starting game with {commandLineArgs.NumberOfBoxes} boxes...");
-                //Console.WriteLine();
-
                 var game = new PortalGame(morty, commandLineArgs.NumberOfBoxes);
                 game.RunGameLoop();
 

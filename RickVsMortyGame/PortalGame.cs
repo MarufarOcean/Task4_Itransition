@@ -119,10 +119,10 @@ namespace RickVsMortyGame
                 playAgain = ConsoleHelper.ReadYesNoInput("Rick: ");
             }
 
-            // Goodbye message comes FIRST
+            // Goodbye message
             Console.WriteLine("Morty: Okay... uh, bye!");
 
-            // Game Stats comes AFTER goodbye message
+            // Game Stats 
             ConsoleHelper.DisplayStatistics(_statistics, _morty, _numberOfBoxes);
         }
     }
